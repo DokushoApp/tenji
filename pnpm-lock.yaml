@@ -35,6 +35,10 @@ importers:
       tailwindcss:
         specifier: ^4.1.4
         version: 4.1.4
+    devDependencies:
+      deno:
+        specifier: ^2.2.11
+        version: 2.2.11
 
 packages:
 
@@ -155,6 +159,36 @@ packages:
     peerDependenciesMeta:
       '@opentelemetry/api':
         optional: true
+
+  '@deno/darwin-arm64@2.2.11':
+    resolution: {integrity: sha512-UTj5l4A+bhuRGeFtwjgCp2PLCfm7EsdeOfuGWrWwL/Ji+2XO/8jNYgHCunX9dG8yelVF3ebTI4igN8+dUV2Jqg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@deno/darwin-x64@2.2.11':
+    resolution: {integrity: sha512-FfPR8wTLJihlgYv1bF0EML2Dk/sZtF1E8e1RaB/X0yNHmm1khQNjTjFaD59+yt2CU4tCHDBN0oNgxdYehhQlBQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@deno/linux-arm64-glibc@2.2.11':
+    resolution: {integrity: sha512-+BM7FQa3SGd7GwPBG2rTBvAL8A4WBpUXuTRH8vgnP8bQFxWdu1rtiHuZzdu/E2l4CTh+MVzqFiZnEhCUnQ1+cg==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@deno/linux-x64-glibc@2.2.11':
+    resolution: {integrity: sha512-/+FQPJIJFF86pocR4Fz8iqpI4w+r8TqjyyNpX7I8FWyOw0xBI5RfZAWEY1lt7faKGJOsz2lXk06BH2s5trirXQ==}
+    cpu: [x64]
+    os: [linux]
+
+  '@deno/win32-arm64@2.2.11':
+    resolution: {integrity: sha512-iN2yq9mjOZPHzOE97cjoxUQM3SBWEIasfelPGKQrcauKjk9qY41m3Ut48ueQGbMmgxQjA7og/d6bfwcd+79/kA==}
+    cpu: [arm64]
+    os: [win32]
+
+  '@deno/win32-x64@2.2.11':
+    resolution: {integrity: sha512-JG2W/IxKDGruSnT4bvxIxD5jZwZiQpRaGYiwfPo73xyvndji2aXYWs7n5HU3EjsouQTk+A3IsQQ2mb5+qTwJRw==}
+    cpu: [x64]
+    os: [win32]
 
   '@emnapi/runtime@1.4.1':
     resolution: {integrity: sha512-LMshMVP0ZhACNjQNYXiU1iZJ6QCcv0lUdPDPugqGvCGXt5xtRVBPdtA0qU12pEXZzpWAhWlZYptfdAFq10DOVQ==}
@@ -860,6 +894,10 @@ packages:
 
   defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
+
+  deno@2.2.11:
+    resolution: {integrity: sha512-8zlSJDGBXVLcHzWXxPLYsWZvUOiazbU4LZRlA/JrUpSkf4tac0NryVyOPMM00+pbAzySwDVQOKDM3twjPPFpSg==}
+    hasBin: true
 
   dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
@@ -1954,6 +1992,24 @@ snapshots:
     dependencies:
       astro: 5.6.1(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)
 
+  '@deno/darwin-arm64@2.2.11':
+    optional: true
+
+  '@deno/darwin-x64@2.2.11':
+    optional: true
+
+  '@deno/linux-arm64-glibc@2.2.11':
+    optional: true
+
+  '@deno/linux-x64-glibc@2.2.11':
+    optional: true
+
+  '@deno/win32-arm64@2.2.11':
+    optional: true
+
+  '@deno/win32-x64@2.2.11':
+    optional: true
+
   '@emnapi/runtime@1.4.1':
     dependencies:
       tslib: 2.8.1
@@ -2574,6 +2630,15 @@ snapshots:
       character-entities: 2.0.2
 
   defu@6.1.4: {}
+
+  deno@2.2.11:
+    optionalDependencies:
+      '@deno/darwin-arm64': 2.2.11
+      '@deno/darwin-x64': 2.2.11
+      '@deno/linux-arm64-glibc': 2.2.11
+      '@deno/linux-x64-glibc': 2.2.11
+      '@deno/win32-arm64': 2.2.11
+      '@deno/win32-x64': 2.2.11
 
   dequal@2.0.3: {}
 
