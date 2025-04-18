@@ -1,7 +1,6 @@
 ---
 // src/layouts/MainLayout.astro
 import "../styles/global.css";
-import { Image } from 'astro:assets';
 import Icon from "../images/icon.png"
 
 // Define props with defaults and types
@@ -34,7 +33,7 @@ const {
             <!-- Logo and Description -->
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center gap-2 mb-4">
-                    <Image src={Icon} alt="icon" class="w-12" />
+                    <img src={Icon.src} alt="icon" class="w-12" />
                     <span class="text-xl font-bold text-gray-900 dark:text-white">Dokusho</span>
                 </div>
                 <p class="text-gray-600 dark:text-gray-400 mb-4">

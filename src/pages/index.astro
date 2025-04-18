@@ -1,8 +1,7 @@
 ---
-import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import appSrc from "../../public/app.png";
-import appIconSrc from "../../public/icon.png";
+import appSrc from "../images/app.png";
+import appIconSrc from "../images/icon.png";
 ---
 
 <BaseLayout>
@@ -36,8 +35,8 @@ import appIconSrc from "../../public/icon.png";
 			<!-- App Screenshot Preview -->
 			<div class="flex-1 relative">
 				<div class="w-full h-auto rounded-2xl shadow-xl overflow-hidden">
-					<Picture
-						src={appSrc}
+					<img
+						src={appSrc.src}
 						alt="Dokusho Library Interface"
 						class="w-full h-auto"
 						width="600"
@@ -45,8 +44,8 @@ import appIconSrc from "../../public/icon.png";
 					/>
 				</div>
 				<div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-xl shadow-lg overflow-hidden z-10 hidden md:block">
-					<Picture
-						src={appIconSrc}
+					<img
+						src={appIconSrc.src}
 						alt="Dokusho Icon"
 						class="w-full h-full object-cover"
 						width="120"
@@ -142,8 +141,8 @@ import appIconSrc from "../../public/icon.png";
 
 			<div class="grid grid-cols-1 gap-6">
 				<div class="rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700">
-					<Picture
-						src={appSrc}
+					<img
+						src={appSrc.src}
 						alt="Dokusho Library View"
 						class="w-full h-auto"
 						width="800"
