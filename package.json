@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "deno run --allow-net --allow-read --allow-env ./dist/server/entry.mjs",
     "astro": "astro"
   },
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
     "@astrojs/react": "^4.2.3",
+    "@deno/astro-adapter": "^0.3.0",
     "@tailwindcss/vite": "^4.1.4",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.5",
