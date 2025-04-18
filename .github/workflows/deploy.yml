@@ -27,5 +27,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: dokusho-tenji # TODO: replace with Deno Deploy project name
-          entrypoint: jsr:@std/http/file-server
+          entrypoint: server/entry.mjs
           root: dist
