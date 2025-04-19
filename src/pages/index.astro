@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import appSrc from "../images/app.png";
+import appLightSrc from "../images/app-light.png";
+import appDarkSrc from "../images/app-dark.png";
 import appIconSrc from "../images/icon.png";
 ---
 
@@ -32,13 +33,22 @@ import appIconSrc from "../images/icon.png";
 					Alpha version available with local reader support. Beta coming May 22, 2025.
 				</div>
 			</div>
-			<!-- App Screenshot Preview -->
+			<!-- App Screenshot Preview with theme detection -->
 			<div class="flex-1 relative">
 				<div class="w-full h-auto rounded-2xl shadow-xl overflow-hidden">
+					<!-- Light mode image - hidden in dark mode -->
 					<img
-						src={appSrc.src}
-						alt="Dokusho Library Interface"
-						class="w-full h-auto"
+						src={appLightSrc.src}
+						alt="Dokusho Library Interface (Light)"
+						class="w-full h-auto block dark:hidden"
+						width="600"
+						height="400"
+					/>
+					<!-- Dark mode image - hidden in light mode -->
+					<img
+						src={appDarkSrc.src}
+						alt="Dokusho Library Interface (Dark)"
+						class="w-full h-auto hidden dark:block"
 						width="600"
 						height="400"
 					/>
@@ -92,7 +102,38 @@ import appIconSrc from "../images/icon.png";
 			</div>
 		</div>
 
-		<!-- Development Status -->
+		<!-- Screenshots Gallery -->
+		<div class="mb-24">
+			<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">See It In Action</h2>
+
+			<div class="grid grid-cols-1 gap-6">
+				<div class="rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700">
+					<!-- Light mode screenshot in gallery - hidden in dark mode -->
+					<img
+						src={appLightSrc.src}
+						alt="Dokusho Library View (Light)"
+						class="w-full h-auto block dark:hidden"
+						width="800"
+						height="450"
+					/>
+					<!-- Dark mode screenshot in gallery - hidden in light mode -->
+					<img
+						src={appDarkSrc.src}
+						alt="Dokusho Library View (Dark)"
+						class="w-full h-auto hidden dark:block"
+						width="800"
+						height="450"
+					/>
+					<div class="p-4 bg-white dark:bg-gray-800">
+						<p class="text-gray-700 dark:text-gray-300 font-medium">Elegant library management with customizable categories</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Rest of the content remains the same -->
+
+		<!-- Development Status section (unchanged) -->
 		<div class="mb-24 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-gray-800 dark:to-gray-800 p-8 rounded-2xl border border-orange-100 dark:border-orange-900/20">
 			<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">Development Roadmap</h2>
 
@@ -130,26 +171,6 @@ import appIconSrc from "../images/icon.png";
 					<div>
 						<h3 class="text-lg font-medium text-gray-900 dark:text-white">Public Release — Coming Soon</h3>
 						<p class="text-gray-600 dark:text-gray-400 mt-1">Full-featured release with cloud sync, mobile apps, and more.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Screenshots Gallery -->
-		<div class="mb-24">
-			<h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">See It In Action</h2>
-
-			<div class="grid grid-cols-1 gap-6">
-				<div class="rounded-xl overflow-hidden shadow-md border border-gray-200 dark:border-gray-700">
-					<img
-						src={appSrc.src}
-						alt="Dokusho Library View"
-						class="w-full h-auto"
-						width="800"
-						height="450"
-					/>
-					<div class="p-4 bg-white dark:bg-gray-800">
-						<p class="text-gray-700 dark:text-gray-300 font-medium">Elegant library management with customizable categories</p>
 					</div>
 				</div>
 			</div>
